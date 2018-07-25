@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">mysql</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bus_tracking</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <mapping class="com.st.bean.LoginInfo"/>
+        <mapping class="com.st.bean.OwnerInfo"/>
+        <mapping class="com.st.bean.BusInfo"/>
+        <mapping class="com.st.bean.BusStopInfo"/>
+        <mapping class="com.st.bean.BusTripInfo"/>
+        <mapping class="com.st.bean.StopsInfo"/>
+<mapping class="com.st.bean.DriverInfo"/>
+<mapping class="com.st.bean.UserInfo"/>
+    </session-factory>
+</hibernate-configuration>

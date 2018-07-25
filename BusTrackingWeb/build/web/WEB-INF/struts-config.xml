@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+<struts-config>
+    <form-beans>
+        <form-bean name="LoginInfo" type="com.st.bean.LoginInfo"/>
+        <form-bean name="OwnerInfo" type="com.st.bean.OwnerInfo"/>
+        <form-bean name="BusInfo" type="com.st.bean.BusInfo"/>
+        <form-bean name="BusTripInfo" type="com.st.bean.BusTripInfo"/>
+        <form-bean name="BusStopInfo" type="com.st.bean.BusStopInfo"/>
+        <form-bean name="StopsInfo" type="com.st.bean.StopsInfo"/>
+        <form-bean name="DriverInfo" type="com.st.bean.DriverInfo"/>
+<form-bean name="UserInfo" type="com.st.bean.UserInfo"/>
+      
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="index" path="/index.jsp"/>
+        <forward name="select_trip" path="/select_trip.jsp"/>
+        <forward name="admin_select_trip" path="/admin_select_trip.jsp"/>
+        <forward name="select_bus" path="/select_bus.jsp"/>
+        <forward name="owner_add_bus_stop_view" path="/owner_add_bus_stop_view.jsp"/>
+        <forward name="admin_bus_stop_view" path="/admin_bus_stop_view.jsp"/>
+        <forward name="owner_home" path="/owner_home.jsp"/>
+        <forward name="approve_owner_action" path="/approve_owner_action.do"/>
+        <forward name="admin_home" path="/admin_home.jsp"/>
+        <forward name="common_login_info_login" path="/common_login_info_login.jsp"/>
+        <forward name="common_owner_info_save" path="/common_owner_info_save.jsp"/>
+        <forward name="common_owner_info_update" path="/common_owner_info_update.jsp"/>
+        <forward name="common_owner_info_view" path="/common_owner_info_view.jsp"/>
+        <forward name="owner_bus_info_save" path="/owner_bus_info_save.jsp"/>
+        <forward name="owner_bus_info_update" path="/owner_bus_info_update.jsp"/>
+        <forward name="owner_bus_info_view" path="/owner_bus_info_view.jsp"/>
+        <forward name="admin_bus_info_view" path="/admin_bus_info_view.jsp"/>
+        <forward name="owner_bus_stop_info_save" path="/owner_bus_stop_info_save.jsp"/>
+        <forward name="owner_bus_stop_info_update" path="/owner_bus_stop_info_update.jsp"/>
+        <forward name="owner_bus_stop_info_view" path="/owner_bus_stop_info_view.jsp"/>
+        <forward name="owner_bus_trip_info_save" path="/owner_bus_trip_info_save.jsp"/>
+        <forward name="owner_bus_trip_info_update" path="/owner_bus_trip_info_update.jsp"/>
+        <forward name="owner_bus_trip_info_view" path="/owner_bus_trip_info_view.jsp"/>
+        <forward name="admin_stops_info_save" path="/admin_stops_info_save.jsp"/>
+        <forward name="admin_stops_info_update" path="/admin_stops_info_update.jsp"/>
+        <forward name="admin_stops_info_view" path="/admin_stops_info_view.jsp"/>
+        <forward name="owner_driver_info_save" path="/owner_driver_info_save.jsp"/>
+        <forward name="owner_driver_info_update" path="/owner_driver_info_update.jsp"/>
+        <forward name="owner_driver_info_view" path="/owner_driver_info_view.jsp"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action input="/" name="StopsInfo" path="/admin_add_stops_action" scope="request" type="com.custom.action.AdminAddStopsAction"/>
+        <action input="/" name="LoginInfo" path="/join_action" scope="request" type="com.custom.action.JoinAction"/>
+        <action input="/" name="LoginInfo" path="/approve_owner_action" scope="request" type="com.custom.action.ApproveOwnerAction"/>
+        <action input="/" name="LoginInfo" path="/login_info_get" scope="request" type="com.st.action.CommonAction"/>
+        <action input="/" name="LoginInfo" path="/logout_action" scope="session" type="com.custom.action.LogoutAction"/>
+        <action path="/login" type="com.custom.action.LoginAction"/>
+        <action input="/index.jsp" name="LoginBean" path="/join_save" type="com.st.action.JoinAction"/>
+        <action input="common_login_info_login.jsp" name="LoginInfo" path="/common_login_info_login" scope="request" type="com.custom.action.LoginAction"/>
+        <action input="common_owner_info_save.jsp" name="OwnerInfo" path="/common_owner_info_save" scope="request" type="com.st.action.CommonAction"/>
+        <action input="common_owner_info_update.jsp" name="OwnerInfo" path="/common_owner_info_update" scope="request" type="com.st.action.CommonAction"/>
+        <action input="common_owner_info_view.jsp" name="OwnerInfo" path="/common_owner_info_get" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_bus_info_save.jsp" name="BusInfo" path="/owner_bus_info_save" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_bus_info_update.jsp" name="BusInfo" path="/owner_bus_info_update" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_bus_info_view.jsp" name="BusInfo" path="/owner_bus_info_get" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_bus_stop_info_save.jsp" name="BusStopInfo" path="/owner_bus_stop_info_save" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_bus_stop_info_update.jsp" name="BusStopInfo" path="/owner_bus_stop_info_update" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_bus_stop_info_view.jsp" name="BusStopInfo" path="/owner_bus_stop_info_get" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_bus_trip_info_save.jsp" name="BusTripInfo" path="/owner_bus_trip_info_save" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_bus_trip_info_update.jsp" name="BusTripInfo" path="/owner_bus_trip_info_update" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_bus_trip_info_view.jsp" name="BusTripInfo" path="/owner_bus_trip_info_get" scope="request" type="com.st.action.CommonAction"/>
+        <action input="admin_stops_info_save.jsp" name="StopsInfo" path="/admin_stops_info_save" scope="request" type="com.st.action.CommonAction"/>
+        <action input="admin_stops_info_update.jsp" name="StopsInfo" path="/admin_stops_info_update" scope="request" type="com.st.action.CommonAction"/>
+        <action input="admin_stops_info_view.jsp" name="StopsInfo" path="/admin_stops_info_get" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_driver_info_save.jsp" name="DriverInfo" path="/owner_driver_info_save" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_driver_info_update.jsp" name="DriverInfo" path="/owner_driver_info_update" scope="request" type="com.st.action.CommonAction"/>
+        <action input="owner_driver_info_view.jsp" name="DriverInfo" path="/owner_driver_info_get" scope="request" type="com.st.action.CommonAction"/>
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>      
+        <set-property property="moduleAware" value="true"/>
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

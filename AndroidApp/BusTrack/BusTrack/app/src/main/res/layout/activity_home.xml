@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="5dp"
+    tools:context="com.bustrack.bustrack.activity.HomeActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteSource"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Source"
+        android:paddingLeft="5dp"
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:layout_marginBottom="5dp"/>
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteDestination"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="5dp"
+        android:hint="Destination"
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:id="@+id/getBusButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edit_text"
+        android:text="GET BUS" />
+</LinearLayout>

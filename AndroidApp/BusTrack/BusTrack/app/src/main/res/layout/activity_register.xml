@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/background"
+    tools:context="com.bustrack.bustrack.activity.RegisterActivity">
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <EditText
+                android:id="@+id/nameRegisterActivity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_edit_text"
+                android:hint="Name"
+                android:imeOptions="actionUnspecified"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:singleLine="true" />
+
+
+            <EditText
+                android:id="@+id/emailRegisterActivity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_edit_text"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:singleLine="true" />
+            <EditText
+                android:id="@+id/mobileNumberRegisterActivity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_edit_text"
+                android:hint="Mobile Number"
+                android:padding="10dp"
+                android:imeOptions="actionUnspecified"
+                android:inputType="number"
+                android:maxLength="10"
+                android:layout_marginBottom="5dp"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+
+            <EditText
+                android:id="@+id/passwordRegisterActivity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_edit_text"
+                android:hint="Password"
+                android:padding="10dp"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:layout_marginBottom="5dp"
+                android:singleLine="true" />
+
+
+            <EditText
+                android:id="@+id/reenterPasswordRegisterActivity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edit_text"
+                android:hint="Re-enter Password"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:layout_marginBottom="5dp"
+                android:singleLine="true" />
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/new_shape"
+                android:text="Register"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
